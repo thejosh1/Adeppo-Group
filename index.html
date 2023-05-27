@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="app.511745ce.js" rel="preload" as="script">
     <link href="chunk-vendors.cbf11e64.js" rel="preload" as="script">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <!-- <link rel="stylesheet" href="css/chunk-vendors.c6dedb1c.css"> -->
 </head>
 
@@ -35,17 +36,60 @@
         </nav>
     </header>
     <div class="container-row">
+        <div class="pagination">
+            <div class="pag-item-1" id="pag1">
+                <div class="pag-marker"></div>
+            </div>
+            <div class="pag-item-2"></div>
+            <div class="pag-item-1", id="pag2">
+                <div class="pag-marker"></div>
+            </div>
+            <div class="pag-item-2"></div>
+            <div class="pag-item-1">
+                <div class="pag-marker", id="pag3"></div>
+            </div>
+        </div>
         <div class="scroll-wheel-wrapper">
             <div>
                 <img src="images/Ellipse 1.png", alt="ring", class="scroll-img">
                 <img src="images/Ellipse 2.png" alt="ring", class="scroll-img2">
                 <div class="inner-wheel-item">
                     <ul id="menu-wheel", class="scroll-wheel wheel-item menu">
+                        <img src="images/Ellipse 4.png", alt="ring", class="scroll-img3">
                         <li class="scrolled-point oil-and-gas-point">
-                            <a href="/#" onmouseenter="window.location.href='/#'">
-                                <div class="menu-circle">
-                                    <img src="images/petrol.png", alt="petrol", class="active-icon oil-and-gas-image">
-                                    <img src="images/Ellipse 4.png">
+                            <a href="#" onmouseenter="window.location.href='#'">
+                                <div class="menu-curved-line">
+                                    <div class="menu-circle", id="menu-circle">
+                                        <div class="column-text">
+                                            <img src="images/petrol.png", alt="petrol", class="active-icon oil-and-gas-image">
+                                            <p class="text">Oil and Gas</p>
+                                        </div>
+                                        <img src="images/Ellipse 4.png">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="scrolled-point logistic-point">
+                            <a href="#" onmouseenter="window.location.href='#'">
+                                <div class="menu-curved-line1">
+                                    <div class="menu-circle1", id="menu-circle1">
+                                        <div class="column-text">
+                                            <img src="images/logistic.png", alt="logistics", class="active-icon logistic-image">
+                                            <p class="text">Logistics</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="scrolled-point renewable-point">
+                            <a href="#" onmouseenter="window.location.href='#'">
+                                <div class="menu-curved-line2">
+                                    <div class="menu-circle2", id="menu-circle2">
+                                        <div class="column-text">
+                                            <img src="images/charge battery.png", alt="petrol", class="active-icon renewable-image">
+                                            <p class="text">Renewable Energy</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -53,9 +97,37 @@
                 </div>
             </div>
         </div>
+        <div class="description-column" id="description-column">
+            <div class="description-column-text">
+                <p class="description-header">Oil and Gas</p>
+                <p class="description-text">Providing services such as constructing
+                    rigs, designing pipes and pipelines, 
+                    carrying out technical, construction
+                    works and supplies among others. 
+                </p>
+            </div>
+            <div class="description-column-text">
+              <p class="description-header">Marine Logistics</p>
+              <p class="description-text">We ensure the process of planning,
+                implementing and. managing the
+                movement of goods and information
+                involved in the ocean carriage.”
+            </p>               
+            </div>
+            <div class="description-column-text">
+                <p class="description-header">Renewable Energy</p>
+                <p class="description-text">We find ways to generate energy from
+                    (theoretically) unlimited natural
+                    resources.
+                </p>
+            </div>
+        </div>
     </div>
-
+</div>
+<script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
+
+
 
