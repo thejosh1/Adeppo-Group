@@ -48,11 +48,12 @@ menuCircle.addEventListener('mouseover', () => {
   pagMarker3.style.backgroundColor = 'transparent';
 
   //change the background
-  overlay.style.backgroundColor = 'white';
   overlay.style.opacity = '1';
-  body.style.backgroundImage = 'url("images/oil-and-gas.png")';
+  overlay.style.backgroundColor = 'rgba(255, 255, 255, 1)';
   setTimeout(() => {
     overlay.style.opacity = '0';
+    body.style.backgroundImage = 'url("images/oil-and-gas.png")';
+    overlay.style.backgroundColor = 'rgba(255, 255, 255, 0)';
   }, 300);
 
   // Update the clicked circle
@@ -68,11 +69,12 @@ menuCircle1.addEventListener('mouseover', () => {
   pagMarker2.style.backgroundColor = 'transparent';
 
   //change the background color
-  overlay.style.backgroundColor = 'white';
   overlay.style.opacity = '1';
-  body.style.backgroundImage = 'url("images/background-img.png")';
+  overlay.style.backgroundColor = 'rgba(255, 255, 255, 1)';
   setTimeout(() => {
     overlay.style.opacity = '0';
+    body.style.backgroundImage = 'url("images/background-img.png")';
+    overlay.style.backgroundColor = 'rgba(255, 255, 255, 0)'
   }, 300);
 
   // Update the clicked circle
@@ -88,17 +90,66 @@ menuCircle2.addEventListener('mouseover', () => {
   pagMarker3.style.backgroundColor = 'transparent';
 
   //change the background image
-  overlay.style.backgroundColor = 'white';
   overlay.style.opacity = '1';
-  body.style.backgroundImage = 'url("images/renewable-energy.png")';
+  overlay.style.backgroundColor = 'rgba(255, 255, 255, 1)';
   setTimeout(() => {
     overlay.style.opacity = '0';
+    body.style.backgroundImage = 'url("images/renewable-energy.png")';
+    overlay.style.backgroundColor = 'rgba(255, 255, 255, 0)';
   }, 300);
 
   // Update the clicked circle
   pagMarker3.style.backgroundColor = 'red';
   descriptionHeader.textContent = 'Renewable Energy';
   descriptionText.textContent = 'We find ways to generate energy from (theoretically) unlimited natural resources.';
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var link = document.getElementById('menu-circle');
+  var mobileText = document.getElementById('description-column-text');
+  var mobileButton = document.getElementById('mobile-button');
+
+  link.addEventListener('click', function(event) {
+    if (window.innerWidth <= 768) {
+      event.preventDefault(); // Prevent the default navigation behavior
+      mobileText.style.display = 'flex';
+      mobileButton.addEventListener('click', function() {
+        window.location.href = 'oil-and-gas.html';
+      })
+    }
+  });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var link = document.getElementById('menu-circle1');
+  var mobileText = document.getElementById('description-column-text');
+  var mobileButton = document.getElementById('mobile-button');
+
+  link.addEventListener('click', function(event) {
+    if (window.innerWidth <= 768) {
+      event.preventDefault(); // Prevent the default navigation behavior
+      mobileText.style.display = 'flex';
+      mobileButton.addEventListener('click', function() {
+        window.location.href = 'logistics.html';
+      })
+    }
+  });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var link = document.getElementById('menu-circle2');
+  var mobileText = document.getElementById('description-column-text');
+  var mobileButton = document.getElementById('mobile-button');
+
+  link.addEventListener('click', function(event) {
+    if (window.innerWidth <= 768) {
+      event.preventDefault(); // Prevent the default navigation behavior
+      mobileText.style.display = 'flex';
+      mobileButton.addEventListener('click', function() {
+        window.location.href = 'renewable-energy.html';
+      })
+    }
+  });
 });
 
 console.log("hey there");

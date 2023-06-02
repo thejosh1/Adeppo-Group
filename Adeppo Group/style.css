@@ -809,6 +809,18 @@ p.text {
   position: relative;
 }
 
+@media (max-width: 50em) {
+  .description-column-text {
+    display: none;
+    flex-direction: column;
+    top: 23px;
+    width: 200px;
+    height: 325px;
+    margin-left: 10px;
+    position: relative;
+  }
+}
+
 .description-header {
   font-family: 'Lato', sans-serif;
   color: #F7F7F7;
