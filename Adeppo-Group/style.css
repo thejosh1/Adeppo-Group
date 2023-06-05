@@ -168,6 +168,12 @@ svg {
   }
 }
 
+@media (max-width: 50em) {
+  .nav-link {
+    display: none;
+  }
+}
+
 .nav-list a {
   text-decoration: none;
   color: #293037;
@@ -201,7 +207,7 @@ svg {
 }
 
 @media (max-width: 50em) {
-  .primary-navigation {
+  .primary-navigation[data-visible] {
     display: none;
     position: fixed;
     padding: 2.8125rem;
@@ -209,6 +215,8 @@ svg {
     max-width: 25rem;
     margin-left: auto;
     background: #F9F9F9;
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
+    border-radius: 0.25rem;
   }
 
   .primary-header[data-overlay]::before {
@@ -223,7 +231,7 @@ svg {
     display: grid;
     gap: 2rem;
     text-align: center;
-    font-weight: var(--fw-bold);
+    font-weight: 700;
   }
 
   .primary-navigation[data-visible] {
@@ -244,7 +252,14 @@ svg {
   }
 
   .mobile-nav-toggle .icon-close {
-    display: none;
+    display: block;
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
   }
 }
 
