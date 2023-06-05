@@ -30,6 +30,8 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Set core body defaults */
@@ -117,7 +119,7 @@ svg {
 
 .nav-wrapper {
   display: flex;
-  justify-content: space-between;
+  margin-left: 4.1%;
 }
 
 @media (max-width: 50em) {
@@ -125,6 +127,7 @@ svg {
     margin-left: 0.9375rem;
     margin-right: 1.354375rem;
     margin-top: 0px;
+    position: relative;
   }
 }
 
@@ -133,7 +136,9 @@ svg {
 }
 
 .primary-navigation {
-  margin-left: 345.59px;
+  margin-left: 20.5%;
+  margin-right: 4%;
+  width: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -148,8 +153,8 @@ svg {
 
 .nav-list {
   display: flex;
-  gap: 15px;
-  margin-top: 28px;
+  gap: 2.6%;
+  margin-top: 58px;
 }
 
 @media(min-width: 768px) and (max-width: 1024px) {
@@ -180,6 +185,7 @@ svg {
 
 .logo-image {
   height: 75px;
+  margin-top: 30px;
 }
 
 @media (max-width: 50em) {
@@ -233,6 +239,8 @@ svg {
     background: transparent;
     border: 0;
     padding: 0.5em;
+    width: 5.5%;
+    height: 23.33%;
   }
 
   .mobile-nav-toggle .icon-close {
@@ -254,7 +262,7 @@ svg {
 }
 
 .our-services {
-  margin-left: 11.3125rem;
+  margin-left: 18.1%;
   color: #293037;
   font-size: 1rem;
   font-weight: 600;
@@ -277,7 +285,7 @@ svg {
 }
 
 .oil-and-gas-button {
-  margin-left: 45px;
+  margin-left: 8.1%;
   border: none;
   box-shadow: none;
   border-radius: 30px;
@@ -1089,7 +1097,7 @@ p.text {
 
   .small-circle {
     right: 0px;
-    top: -20px;
+    top: -150px;
     height: 550px;
     position: absolute;
     z-index: -2;
@@ -1098,8 +1106,8 @@ p.text {
 
   .small-circle2 {
     position: absolute;
-    top: 41.75px;
-    right: -59px;
+    top: -45.25px;
+    right: 0px;
     height: 412.5px;
     z-index: -1;
     background-size: cover;
@@ -1120,8 +1128,7 @@ p.text {
 
 .banner-section {
   width: 100%;
-  /* display: flex;
-  position: relative; */
+  position: relative;
 }
 
 @media (min-width: 780px) {
@@ -1131,8 +1138,10 @@ p.text {
   }
 }
 
-.banner-image-section {
-  position: relative;
+@media (max-width:50em) {
+  .banner-image-section  {
+    display: none;
+  }
 }
 
 @media (min-width:780px) {
@@ -1148,20 +1157,20 @@ p.text {
 .big-circle1 {
   position: absolute;
   height: 1400px;
-  left: 368px;
-  top: -120px;
+  width: 99.36%;
+  left: 18.2%;
+  top: -150px;
   /* opacity: 0.25; */
   z-index: -2;
-  width: auto;
   overflow: hidden;
 }
 
 .big-circle2 {
   position: absolute;
   height: 1050px;
-  width: 1050px;
-  left: 588px;
-  top: 5px;
+  width: 74.5%;
+  left: 27%;
+  top: -54px;
   z-index: -1;
   background-size: cover;
 }
@@ -1173,9 +1182,11 @@ p.text {
   }
 }
 
-.even-columns {
-  display: flex;
-  gap: 1rem;
+@media (min-width: 768px) {
+  .even-columns {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 50em) {
@@ -1193,7 +1204,7 @@ p.text {
     flex-direction: column;
     margin-left: 60px;
     justify-content: center;
-    width: 632px;
+    width: 44.85%;
     height: 345px;
     margin-top: 238.5px;
     margin-right: 13px; 
@@ -1241,7 +1252,7 @@ p.text {
 
 @media (min-width : 768px) {
   .banner-column {
-    width: 640px;
+    width: 45.42%;
   }
 }
 
@@ -1275,8 +1286,8 @@ p.text {
   .banner-image-column {
     display: grid;
     position: relative;
-    margin-top: -158px;
-    margin-left: 138px;
+    margin-top: -220px;
+    margin-left: 150px;
     z-index: 1;
   }
 }
@@ -1290,13 +1301,14 @@ p.text {
 
 
 .banner-image {
-  height: 320px;
+  width: 90%;
   border-radius: 5px;
 }
 
 @media (max-width: 50em) {
   .banner-image {
     height: 116.77px;
+    width: 233px;
     margin-bottom: 1.05rem;
     margin-right: 0px;
   }
@@ -1308,10 +1320,9 @@ p.text {
 @media( max-width: 50em) {
   .section-text-container {
     margin-top: 60px;
-    margin-left: 33px;
     margin-bottom: 60px;
     align-items: center;
-    width: 23.5rem;
+    width: 100%;
 
   }
 }
@@ -1320,7 +1331,7 @@ p.text {
   .section-text-container {
     margin-top: 139px;
     width: 100%;
-    margin-left: 60px;
+    margin-left: 3.86%;
     margin-right: 60px;
     margin-bottom: 140px;
   }
@@ -1340,7 +1351,11 @@ p.text {
 
 @media (min-width: 768px) {
   .about-us {
-   text-align: start;   
+   text-align: start;  
+   font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #686868;
+    font-size: 28px; 
   }
 
   .about-us-description-text {
@@ -1376,6 +1391,7 @@ p.text {
 @media (min-width: 768px) {
   .section-container {
     display: flex;
+    margin-bottom: 60px;
   }
 }
 
@@ -1485,7 +1501,7 @@ p.text {
 @media (max-width: 50em) {
   .flow {
     display: grid;
-    margin-left: 1.875rem;
+    margin-left: 3.75%;
     margin-top: 60.78px;
   }
 }
@@ -1626,8 +1642,7 @@ p.text {
     background-image: url("images/rectangle-decorator1.png");
     background-size: cover;
     position: relative;
-    margin-left: 1.875rem;
-    margin-right: 1.875rem;
+    margin-left: 18%;
     margin-bottom: calc(1.875rem*2);
   }
 }
@@ -1800,7 +1815,7 @@ p.text {
   .column-header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
   }
 }
 @media(min-width: 768px) {
@@ -1833,7 +1848,7 @@ p.text {
     font-weight: 500;
     color: #ffffff;
     margin-bottom: 15px;
-    margin-top: 30px;
+    margin-top: 10px;
   }
 
   .column-text {
@@ -1927,7 +1942,7 @@ p.text {
     height: 100%;
     margin-left: 19px;
     margin-right: 19px;
-    margin-top: 15px;
+    margin-top: 10px;
     font-style: normal;
     font-size: 12px;
     font-weight: 400;
@@ -1949,6 +1964,16 @@ p.text {
   }
 }
 
+@media (min-width: 768px) {
+  .grid-container {
+    margin-top: 60px;
+    width: 100%;
+    height: 720px;
+    background-image: url(images/other-services-large-background.png);
+    background-size: cover;
+  }
+}
+
 @media (max-width: 50em) {
   .other-services {
     font-size: 28px;
@@ -1961,13 +1986,37 @@ p.text {
   }
 }
 
+@media (min-width: 768px) {
+  .other-services {
+    margin-left: 4.25%;
+    ont-size: 28px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
 @media (max-width: 50em) {
   .image-row {
     width: 354px;
     height: 374px;
     box-sizing: border-box;
     border-top: 1px solid #FFFFFF;
-    margin-left: 30px;
+    margin-left: 18%;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-row {
+    width: auto;
+    height: 500px;
+    box-sizing: border-box;
+    border-top: 1px solid #FFFFFF;
+    display: flex;
+    margin-left: 4.26%;
+    margin-right: 4.26%;
   }
 }
 
@@ -1989,6 +2038,26 @@ p.text {
   }
 }
 
+@media (min-width: 768px) {
+  .marine-logistics-image {
+    background: url("images/marine-oil-and-gas.png");
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .marine-logistics-image-text {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: #FDBB81;
+  }
+}
+
 @media (max-width: 50em) {
   .renewable-energy-image {
     background: url("images/renewable-energy-services-image.png");
@@ -2004,6 +2073,26 @@ p.text {
     font-weight: 500;
     color: #ffffff;
     padding-top: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .renewable-energy-image {
+    background: url("images/renewable-energy-image.png");
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .renewable-energy-image-text {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
   }
 }
 
@@ -2025,6 +2114,26 @@ p.text {
   }
 }
 
+@media (min-width: 768px) {
+  .real-estate-image {
+    background: url("images/real-estate-image.png");
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .real-estate-image-text {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+  }
+}
+
 @media (max-width: 50em) {
   .pre-footer-container {
     height: 1022px;
@@ -2032,13 +2141,31 @@ p.text {
     background: #C1844D;
     border-radius: 24px 24px 24px 24px;
     margin-top: 60px;
-    margin-left: 30px;
+    margin-left: 18%;
     margin-right: 30px;
     position: relative;
   }
 }
 
+@media(min-width: 768px) {
+  .section-pre-footer-container {
+    width: 100%;
+    margin-top: 140px;
+    display: flex;
+  }
+}
 
+@media (min-width: 768px) {
+  .pre-footer-container {
+    height: 434px;
+    width: 73%;
+    display: flex;
+    border-radius: 24px 0px 0px 24px;
+    background: #C1844D;
+    margin-left: 2.12%;
+    position: relative;
+  }
+}
 
 @media (max-width: 50em) {
   .about-us-list {
@@ -2048,6 +2175,20 @@ p.text {
     width: 100%;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-us-list {
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    white-space: nowrap;
+    position: absolute;
+    top: 95%;
+    left: 0px;
+    width: max-content;
+    display: flex;
+    height: 67.1px;
   }
 }
 
@@ -2071,6 +2212,27 @@ p.text {
   }
 }
 
+@media (min-width: 768px) {
+  .number {
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-right: 8px;
+  }
+
+  .about-us-list-text {
+    width: 217px;
+    font-size: 37px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 30.09px;
+    white-space: break-spaces;
+  }
+}
+
 @media (max-width: 50em) {
   .pre-footer-about-us {
     align-items: center;
@@ -2091,7 +2253,64 @@ p.text {
   }
 }
 
+@media (min-width: 768px) {
+  .pre-footer-about-us {
+    width: 55%;
+    margin-left: 23.05%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 71px;
+    margin-bottom: 67px;
+    
+  }
+
+  .pre-footer-about-us-text {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    color: #FFFFFF;
+    margin-bottom: 63px;
+  }
+}
+
 @media (max-width: 50em) {
+  .ceo-name-and-image {
+    display: flex;
+  }
+
+  .pre-footer-image {
+    width: 92.4px;
+    height: 92px;
+    border-radius: 64px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+  }
+
+  .ceo-name {
+    margin-left: 13.53px;
+    margin-top: 20px;
+  }
+
+  .ceo-name-text {
+    color: #ffffff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+  }
+
+  .ceo-title {
+    color: #ffffff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
   .ceo-name-and-image {
     display: flex;
   }
@@ -2160,6 +2379,79 @@ p.text {
   }
 }
 
+@media (min-width: 768px) {
+  .hero-container {
+    display: none;
+  }
+
+  .big-hero-container {
+    display: flex;
+    position: relative;
+  }
+
+  .real-time-container {
+    width: 136.05px;
+    height: 434px;
+    background: #060454;
+
+  }
+
+  .real-time-updates {
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    display: flex;
+    position: absolute;
+    top: 95%;
+    left: 0px;
+    width: max-content;
+  }
+
+  .real-time-number {
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-right: 8px;
+  }
+
+  .real-time-text {
+    width: 217px;
+    font-size: 37px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 30.09px;
+    margin-bottom: 35.02px;
+  }
+}
+
+@media (max-width: 50em) {
+  .big-hero-container {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .good-management-container {
+    height: 434px;
+    width: 136.05px;
+    background-color: #FF6D00;
+    border-radius: 0px 24px 24px 0px;
+    position: relative;
+  }
+
+  .good-management {
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    display: flex;
+    position: absolute;
+    top: 95%;
+    left: 0px;
+    width: max-content;
+  }
+}
+
 @media (max-width: 50em) {
   .good-management {
     display: flex;
@@ -2167,6 +2459,87 @@ p.text {
     background-color: #FF6D00;
     padding-left: 44.02px;
     border-radius: 0px 0px 24px 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    margin-top: 172px;
+    background-color: #F5F5F4;
+    width: 100%;
+  }
+
+  .footer-item-container {
+    margin-left: 4.25%;
+    display: flex;
+  }
+
+  .footer-wrapper {
+    display: grid;
+  }
+
+  .footer-logo-social {
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 38px;
+  }
+
+  .footer-logo {
+    width: 164.78px;
+    height: 120px;
+  }
+
+  .social-list {
+    position: relative;
+    display: flex;
+    gap: 7px;
+  }
+  
+  .social-list .background-image {
+    background-image: url(images/social-icon-background.png);
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+  
+  .instagram {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    z-index: 1;
+    /* Add any additional styles for the image as needed */
+  }
+
+  .facebook {
+    position: absolute;
+    top: 8px;
+    left: 11px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .twitter {
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    z-index: 1;
+  }
+
+  .whatsapp {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    z-index: 1;
+  }
+
+  .linkedin {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    z-index: 1;
   }
 }
 
@@ -2252,14 +2625,38 @@ p.text {
   }
 }
 
+@media (min-width: 768px) {
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+  }
+
+  .footer-logo-social {
+    display: none;
+  }
+}
+
 @media (max-width: 50em) {
   .footer-nav {
     margin-bottom: 60px;
     margin-top: 61px
+
+  }
+
+  .footer-logo-social2 {
+    display: none;
   }
 
   .footer-nav-col {
     margin-bottom: 61px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-nav-col {
+    margin-top: 58px;
+    margin-bottom: 70px;
   }
 }
 
@@ -2286,6 +2683,12 @@ p.text {
     background: #686868;
     border-radius: 20px;
     margin-bottom: 30.3px;
+  }
+}
+
+@media (min-width: 768px) {
+  .underline {
+    margin-bottom: 70px
   }
 }
 
