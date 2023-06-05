@@ -1750,7 +1750,7 @@ p.text {
 }
 
 @media (max-width: 50em) {
-  .section-even-columns {
+  .section-even-column {
     margin-bottom: 30px;
     display: grid;
     grid-template-columns: 1fr;
@@ -1761,13 +1761,11 @@ p.text {
     ;
   }
 
-  @media (max-width: 50em) {
-    .section-even-column {
-      grid-template-areas: 
-        "section-column2"
-        "section-column1"
-        "section-column3";
-    }
+  .section-even-column {
+    grid-template-areas: 
+      "section-column2"
+      "section-column1"
+      "section-column3";
   }
 
   .section-column1 {
@@ -1782,7 +1780,6 @@ p.text {
     grid-area: section-column3;
   }
 }
-
 @media (max-width: 50em) {
   .arrow-back {
     display: none;
