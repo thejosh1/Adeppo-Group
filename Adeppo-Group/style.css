@@ -153,7 +153,7 @@ svg {
 
 .nav-list {
   display: flex;
-  gap: 2.6%;
+  gap: 1.06%;
   margin-top: 58px;
 }
 
@@ -2031,11 +2031,11 @@ p.text {
 
 @media (max-width: 50em) {
   .image-row {
-    width: 354px;
-    height: 374px;
+    width: 76.47%;
+    height: 30.01%;
     box-sizing: border-box;
     border-top: 1px solid #FFFFFF;
-    margin-left: 18%;
+    margin: 0 auto;
   }
 }
 
@@ -2172,8 +2172,8 @@ p.text {
     background: #C1844D;
     border-radius: 24px 24px 24px 24px;
     margin-top: 60px;
-    margin-left: 18%;
-    margin-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
   }
 }
@@ -2755,7 +2755,7 @@ p.text {
     width: 100%;
     margin-top: 28px;
     background-color: #F9F9F9;
-    height: 514px;
+    height: 650px;
     padding-top: 30px;
   }
 
@@ -2835,12 +2835,311 @@ p.text {
     flex: 2;
   }
 
-  button {
+  .button {
     width: 33.48%;
     height: 50px;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0.7px solid #DADADA;
+    box-shadow: inset 0px 0px 2px #DADADA;
+    color: #ffffff;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 50em) {
+  .section-banner-image {
+    display: none;
+  }
+}
+
+@media (max-width: 50em) {
+  .banner-section-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 50em) {
+  .clip-line {
+    width: 12.9%;
+    height: 2px;
+    background: #060454;
+    border-radius: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 50em) {
+  .logisitics-section-header-text {
+    width: 58.8%;
+  }
+}
+
+@media (max-width: 50em) {
+  .why-us {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #686868;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .reasons {
+    font-family: 'Lato',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #293037;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 50em) {
+  .logistics-even-columns {
+    display: grid;
+    width: 100%;
+  }
+
+  .section-image {
+    width: 76.45%;
+    height: 255px;
+    position: relative;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+
+  .phone-image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 50em) {
+  .section-list {
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+  }
+}
+
+@media (max-width: 50em) {
+  .indicator-text {
+    display: flex;
+    margin-left: 6.47%;
+    justify-content: end;
+    align-items: end;
+    margin-bottom: 30px;
+  }
+
+  .indicator {
+    width: 2.13%;
+    height: 90px;
+    border-radius: 20px;
+    background: #060454;
+    margin-right: 15px;
+  }
+  
+  .section-list-text-header {
+    margin-bottom: 10px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #293037;
+  }
+}
+
+@media (max-width: 50em) {
+  .experience-banner-container {
+    width: 100%;
+    height: 1092px;
+    background: #293037;
+  }
+
+  .circle1 {
+    width: 76.45%;
+    height: 345px;
+    background: #C1844D;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .circle-text {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+  }
+
+  .small-circle-text {
+    position: absolute;
+    text-align: center;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    top: 230px;
+  }
+
+  .circle2 {
+    width: 76.45%;
+    height: 345px;
+    background: #FF8428;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: -44px;
+    z-index: 1;
+  }
+
+  .circle3 {
+    width: 76.45%;
+    height: 345px;
+    background: #7572FF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: -100px;
+  }
+}
+
+@media (max-width: 50em) {
+
+  .services-section-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+  }
+  
+  .services-even-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-areas: 
+      "column1 column2";
+  }
+  
+  .services-column1 {
+    grid-area: column1;
+  }
+  
+  .services-column2 {
+    grid-area: column2;
+  }
+  
+  @media (max-width: 767px) {
+    .services-even-columns {
+      grid-template-areas: 
+        "column2"
+        "column1";
+    }
+  }
+  
+  .service-image {
+    width: 69.97%;
+    height: 324px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+  }
+  
+  .service-img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .services-text {
+    margin-left: 6.47%;
+    margin-right: 6.47%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 29px;
+  }
+
+  .header-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #686868;
+    margin-bottom: 15px;
+  }
+
+  .body-text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #414141;
+  }
+}
+
+@media (max-width: 50em) {
+  .oil-service-image {
+    background: url("images/oil-serivce.png");
+    width: 100%;
+    height: 374px;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .oil-service-image-text {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: #060454;
   }
 }
