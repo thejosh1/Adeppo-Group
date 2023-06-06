@@ -136,14 +136,14 @@ svg {
 }
 
 .primary-navigation {
-  margin-left: 20.5%;
+  margin-left: 17%;
   margin-right: 4%;
   width: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .primary-navigation {
-    margin-left: 20%;
+    margin-left: 12%;
   }
 }
 
@@ -160,7 +160,7 @@ svg {
 @media(min-width: 768px) and (max-width: 1024px) {
   .nav-list a {
     display: flex;
-    gap: 15px;
+    gap: 1.06%;
   }
 
   .nav-link {
@@ -207,16 +207,17 @@ svg {
 }
 
 @media (max-width: 50em) {
-  .primary-navigation[data-visible] {
+  .primary-navigation {
     display: none;
     position: fixed;
     padding: 2.8125rem;
     inset: 7rem 1rem auto;
-    max-width: 25rem;
+    max-width: 18rem;
     margin-left: auto;
     background: #F9F9F9;
     box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
     border-radius: 0.25rem;
+    z-index: 2;
   }
 
   .primary-header[data-overlay]::before {
@@ -252,7 +253,7 @@ svg {
   }
 
   .mobile-nav-toggle .icon-close {
-    display: block;
+    display: none;
     position: fixed;
     top: 2rem;
     right: 1rem;
@@ -260,6 +261,11 @@ svg {
     background: transparent;
     border: 0;
     padding: 0.5em;
+  }
+
+  .oil-and-gas-button {
+    margin-left: 1%;
+    margin-right: 1%;
   }
 }
 
@@ -277,7 +283,7 @@ svg {
 }
 
 .our-services {
-  margin-left: 18.1%;
+  margin-left: 10.1%;
   color: #293037;
   font-size: 1rem;
   font-weight: 600;
@@ -313,8 +319,8 @@ svg {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .oil-and-gas-button {
-    margin-right: 10px;
-    margin-left: 15px;
+    margin-right: 8.19%;
+    margin-left: 2%;
   }
 }
 
@@ -1246,7 +1252,7 @@ p.text {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
-    font-size: 96px;  
+    font-size: 66px;  
   }
 }
 
@@ -1302,7 +1308,8 @@ p.text {
     display: grid;
     position: relative;
     margin-top: -220px;
-    margin-left: 150px;
+    margin-left: 38.5%;
+    margin-right: 2%;
     z-index: 1;
   }
 }
@@ -1426,9 +1433,8 @@ p.text {
 
 @media (min-width: 768px) {
   .column1 {
-    width: 48.48%;
-    margin-left: 60px;
-    margin-right: 37px;
+    width: 100%;
+    margin-left: 5.19%;
     position: relative;
   }
 }
@@ -1450,7 +1456,7 @@ p.text {
 
 @media (min-width: 768px) {
   .column-image-div {
-    width: 640px;
+    width: 100%;
     height: 440px;
     border-radius: 10px;
   }
@@ -1485,6 +1491,15 @@ p.text {
   }
 }
 
+@media (min-width: 768px) {
+  .column-image {
+    width: 100%;
+    position: absolute;
+    height: 440px;
+    border-radius: 10px;
+  }
+}
+
 @media (max-width: 50em) {
   .column2 {
     display: grid;
@@ -1500,8 +1515,9 @@ p.text {
 @media(min-width: 768px) {
   .column2 {
     display: grid;
-    margin-left: 37px;
+    margin-left: 2%;
     text-align: start;
+    margin-right: 1%;
   }
 }
 
@@ -2672,6 +2688,7 @@ p.text {
   .footer-nav-col {
     margin-top: 58px;
     margin-bottom: 70px;
+    margin-left: 4%;
   }
 }
 
@@ -2730,5 +2747,100 @@ p.text {
 @media (max-width: 50em) {
   .empty-space {
     margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 50em) {
+  .banner-container {
+    width: 100%;
+    margin-top: 28px;
+    background-color: #F9F9F9;
+    height: 514px;
+    padding-top: 30px;
+  }
+
+  .banner-form-box {
+    margin-top: 30px;
+    margin-left: 3.2%;
+  }
+
+  .banner-form-text-box {
+    margin-bottom: 24px;
+  }
+
+  .simplifying-marine-logistics {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: #293037;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+
+  p.helping-push {
+    width: 50.2%;
+    font-size: 36px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #293037;
+    margin-bottom: 15px;
+  }
+
+  .irrespective {
+    font-size: 18px;
+    font-family: 'Lato',  sans-serif;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 50em) {
+  .banner-form {
+    margin-bottom: 60px;
+  }
+
+  .email-box {
+    display: block;
+    width: 85.7%;
+    height: 50px;
+    background: #FFFFFF;
+    border: 0.7px solid #DADADA;
+    box-shadow: inset 0px 0px 2px #DADADA;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+
+  .input-form-group {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 14px;
+  }
+
+  .number-of-tons, .pick-up-coordinate {
+    flex: 1;
+    width: 26.8%;
+    margin-right: 10px;
+    background: #FFFFFF;
+    border: 0.7px solid #DADADA;
+    box-shadow: inset 0px 0px 2px #DADADA;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    height: 50px;
+  }
+
+  .pick-up-coordinate {
+    width: 248px;
+    flex: 2;
+  }
+
+  button {
+    width: 33.48%;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
