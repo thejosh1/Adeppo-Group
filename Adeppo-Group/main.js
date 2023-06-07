@@ -1,22 +1,6 @@
-$(document).ready(function() {
-  // breake line after screen resize
-  $(window).on('resize', function () {
-    console.log('hhhhh');
-    var maxWidth = window.matchMedia("(max-width: 50em)");
-    if (maxWidth.matches) {
-      var linebreak = $('#linebreak');
-      linebreak.html(linebreak.text().replace('ease on', 'ease on\n'));
-      console.log('im working');
-    } else {
-      var linebreak = $('#linebreak');
-      console.log("i'm also working");
-      linebreak.html(linebreak.text().replace('\nease on', ' ease on'));
-    }
-  });
-});
-
 window.addEventListener('DOMContentLoaded', function () {
   if (window.location.pathname === '/index.html') {
+    console.log('i am here');
     const body = document.body;
     const overlay = document.getElementById('overlay');
 
@@ -70,6 +54,7 @@ window.addEventListener('DOMContentLoaded', function () {
       pagMarker3.style.backgroundColor = 'transparent';
 
       //change the background
+      console.log( "i then went here");
       overlay.style.opacity = '1';
       overlay.style.backgroundColor = 'rgba(255, 255, 255, 1)';
       setTimeout(() => {
@@ -91,6 +76,7 @@ window.addEventListener('DOMContentLoaded', function () {
       pagMarker2.style.backgroundColor = 'transparent';
 
       //change the background color
+      console.log(" then here too");
       overlay.style.opacity = '1';
       overlay.style.backgroundColor = 'rgba(255, 255, 255, 1)';
       setTimeout(() => {
@@ -176,17 +162,34 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-
-const primaryHeader = document.querySelector(".primary-header");
-const navToggle = document.querySelector(".mobile-nav-toggle");
-const primaryNav = document.querySelector(".primary-navigation");
-
-navToggle.addEventListener("click", () => {
-  primaryNav.hasAttribute("data-visible")
-    ? navToggle.setAttribute("aria-expanded", false)
-    : navToggle.setAttribute("aria-expanded", true);
-  primaryNav.toggleAttribute("data-visible");
-  primaryHeader.toggleAttribute("data-overlay");
+$(document).ready(function() {
+  // breake line after screen resize
+  $(window).on('resize', function () {
+    console.log('hhhhh');
+    var maxWidth = window.matchMedia("(max-width: 50em)");
+    if (maxWidth.matches) {
+      var linebreak = $('#linebreak');
+      linebreak.html(linebreak.text().replace('ease on', 'ease on\n'));
+      console.log('im working');
+    } else {
+      var linebreak = $('#linebreak');
+      console.log("i'm also working");
+      linebreak.html(linebreak.text().replace('\nease on', ' ease on'));
+    }
+  });
 });
+
+
+// const primaryHeader = document.querySelector(".primary-header");
+// const navToggle = document.querySelector(".mobile-nav-toggle");
+// const primaryNav = document.querySelector(".primary-navigation");
+
+// navToggle.addEventListener("click", () => {
+//   primaryNav.hasAttribute("data-visible")
+//     ? navToggle.setAttribute("aria-expanded", false)
+//     : navToggle.setAttribute("aria-expanded", true);
+//   primaryNav.toggleAttribute("data-visible");
+//   primaryHeader.toggleAttribute("data-overlay");
+// });
 
 console.log("hey there");
