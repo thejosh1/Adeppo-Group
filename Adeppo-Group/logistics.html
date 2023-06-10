@@ -21,17 +21,20 @@
             <a href="#"><img src="images/logo1.jpg" alt="Adeppo-group logo" class="logo-image"></a>
             <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                 <img class="icon-hamburger" src="images/icon-hamburger.svg" alt="" aria-hidden="false">
-                <img class="icon-close" src="images/icon-close.svg" alt="" aria-hidden="true">
                 <span class="visually-hidden">Menu</span>
             </button>
             <nav class="primary-navigation" id="primary-navigation">
                 <ul aria-label="Primary" role="list" class="nav-list">
+                    <img class="icon-close" src="images/icon-close.svg" alt="" aria-hidden="true">
                     <li><a href="oil-and-gas.html" class="nav-link">Oil and Gas</a></li>
-                    <li><a href="logistics.html" class="nav-link">marine Logistics</a></li>
+                    <div class="text-underline"><li><a href="logistics.html" class="nav-link current"><p>Marine Logistics</p>
+                    <div class="underline" style="background: #060454;"></div>
+                    </a></li></div>
                     <li><a href="renewable-energy.html" class="nav-link">Renewable Energy</a></li>
                     <p class="our-services">
                         Our Services
                     </p>
+                    <p class="contact-link"><a href="contact-us-page.html">Contact us</a></p>
                     <button class="oil-and-gas-button" style="background: #060454">
                         <p class="oil-and-gas-button-text">Contact us ></p>
                     </button>
@@ -58,12 +61,12 @@
                                 <input type="email" id="email" placeholder="Your-email" class="email-box"><br/>
                             </div>
                             <div class="input-form-group">
-                                <label for="number-of-tons" aria-required="true" aria-label="email-input-box" role="textbox"></label>
+                                <label for="number-of-tons" aria-required="true" aria-label="number-of-tons" role="textbox"></label>
                                 <input type="number" id="number-of-tons" placeholder="no of tons" class="number-of-tons"><br/>
-                                <label for="pick-up-coordinate" aria-required="true" aria-label="email-input-box" role="textbox"></label>
+                                <label for="pick-up-coordinate" aria-required="true" aria-label="pick-up-cordinate" role="textbox"></label>
                                 <input type="text" id="pick-up-coordinate" placeholder="pick-up-coordinate" class="pick-up-coordinate"><br/>
                             </div>
-                            <input type="submit" value="Submit" class="button" style="background: linear-gradient(0deg, #060454, #060454), #FFFFFF">
+                            <input type="submit" value="Submit" class="button" id="open-popup" style="background: linear-gradient(0deg, #060454, #060454), #FFFFFF">
                         </form>
                     </div>
                 </div>
@@ -254,20 +257,25 @@
                     <div class="image-row">
                         <div class="oil-service-image">
                             <div class="oil-service-image-text">
-                                <p class="oil-service-image-text">
+                                <a href="oil-and-gas.html" class="page-link">
+                                    <p class="oil-service-image-text">
                                     Oil and Gas
-                                </p>
+                                </p></a>
                             </div>
                         </div>
                         <div class="renewable-energy-image">
-                            <div class="renewable-energy-image-text">
-                                <p class="renewable-energy-image-text">Renewable Energy</p>
-                            </div>
+                            <a href="renewable-energy.html" class="page-link">
+                                <div class="renewable-energy-image-text">
+                                    <p class="renewable-energy-image-text">Renewable Energy</p>
+                                </div>
+                            </a>
                         </div>
                         <div class="real-estate-image">
-                            <div class="real-estate-image-text">
-                                <p class="real-estate-image-text">Real Estate</p>
-                            </div>
+                            <a href="#" class="page-link">
+                                <div class="real-estate-image-text">
+                                    <p class="real-estate-image-text">Real Estate</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -282,7 +290,7 @@
                     </div>
                     <div class="pre-footer-about-us">
                         <p class="pre-footer-about-us-text">
-                            One thing our company has added to my business is credibility.
+                            One thing your company has added to my business is credibility.
                             My customers are more loyal because they trust that packages will get to them in good time.
                             Nothing beats this!</p>
                         <div class="ceo-name-and-image">
@@ -422,10 +430,10 @@
                                     Services
                                 </P>
                                 <ul class="nav-item-list">
-                                    <li class="nav-item-list-text">Oil and Gas Services</li>
-                                    <li class="nav-item-list-text">Marine Logistics</li>
-                                    <li class="nav-item-list-text">Renewable Energy</li>
-                                    <li class="nav-item-list-text">Real Estate</li>
+                                    <a href="oil-and-gas.html" class="page-link"><li class="nav-item-list-text">Oil and Gas Services</li></a>
+                                    <a href="logistics.html" class="page-link"><li class="nav-item-list-text">Marine Logistics</li></a>
+                                    <a href="renewable-energy.html" class="page-link"><li class="nav-item-list-text">Renewable Energy</li></a>
+                                    <a href="#" class="page-link">li class="nav-item-list-text">Real Estate</li></a>
                                 </ul>
                             </div>
                             <div class="footer-nav-col">
@@ -464,6 +472,26 @@
             </div>
         </section>
     </div>
+    <div class="popup">
+        <button class="close-btn">&times;</button>
+        <div class="pop-up-header-outer-circle"></div>
+        <div class="pop-up-header-inner-circle">
+            <div class="envelope">
+                <div class="envelope-stroke"></div>
+                <div class="envelope-line"></div>
+            </div>
+        </div>
+        <div class="pop-up-body">
+            <p class="pop-up-body-header">
+                We will get back to you
+            </p>
+            <p class="pop-up-body-text">
+                We will send an invoice to your email owoga@gmail.com in the next 30 minutes. Please be patient.
+            </p>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>

@@ -180,16 +180,120 @@ $(document).ready(function() {
 });
 
 
-// const primaryHeader = document.querySelector(".primary-header");
-// const navToggle = document.querySelector(".mobile-nav-toggle");
-// const primaryNav = document.querySelector(".primary-navigation");
+const primaryHeader = document.querySelector(".primary-header");
+const navToggle = document.querySelector(".mobile-nav-toggle");
+const primaryNav = document.querySelector(".primary-navigation");
 
-// navToggle.addEventListener("click", () => {
-//   primaryNav.hasAttribute("data-visible")
-//     ? navToggle.setAttribute("aria-expanded", false)
-//     : navToggle.setAttribute("aria-expanded", true);
-//   primaryNav.toggleAttribute("data-visible");
-//   primaryHeader.toggleAttribute("data-overlay");
-// });
+navToggle.addEventListener("click", () => {
+  primaryNav.hasAttribute("data-visible")
+    ? navToggle.setAttribute("aria-expanded", false)
+    : navToggle.setAttribute("aria-expanded", true);
+  primaryNav.toggleAttribute("data-visible");
+  primaryHeader.toggleAttribute("data-overlay");
+});
+
+const iconClose = document.querySelector(".icon-close");
+
+iconClose.addEventListener("click", () => {
+  primaryNav.hasAttribute("data-visible")
+    ? iconClose.setAttribute("aria-expanded", "false")
+    : iconClose.setAttribute("aria-expanded", "true");
+  primaryNav.toggleAttribute("data-visible");
+  primaryHeader.style.backgroundImage = ""; // Remove the background image
+});
+
 
 console.log("hey there");
+
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach(dropdown => {
+  const select = dropdown.querySelector(".select");
+  const caret = dropdown.querySelector(".caret");
+  const menu = dropdown.querySelector(".menu");
+  const options = dropdown.querySelectorAll(".menu li");
+  const selected = dropdown.querySelector(".select > .selected");
+
+  selected.innerText = "Services";
+
+  select.addEventListener('click', () => {
+    select.classList.toggle('select-clicked');
+
+    caret.classList.toggle("caret-rotate");
+    menu.classList.toggle('menu-open');
+  });
+
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      selected.innerText = option.innerText; 
+      select.classList.remove("select-clicked");
+      caret.classList.remove("caret-rotate");
+      menu.classList.remove("menu-open");
+
+      options.forEach (option=> {
+        option.classList.remove("active");
+      });
+
+      option.classList.add('active');
+    })
+  })
+
+  document.addEventListener('click', event => {
+    const isClickedInsideDropdown = dropdown.contains(event.target);
+    if (!isClickedInsideDropdown) {
+      select.classList.remove('select-clicked');
+      caret.classList.remove('caret-rotate');
+      menu.classList.remove('menu-open');
+    }
+  });
+});
+
+const checkbox = document.querySelector('.terms-and-conditions-checkbox');
+const submitButton = document.getElementById('submit-button');
+const errorMessage = document.querySelector('.error-message');
+
+// submitButton.addEventListener('click', (event) => {
+//   if (!checkbox.classList.contains('checked')) {
+//     event.preventDefault();
+//     errorMessage.style.display = 'block';
+//   } else {
+//     errorMessage.style.display = 'none';
+//   }
+// });
+
+// checkbox.addEventListener('click', () => {
+//   checkbox.classList.toggle('checked');
+//   submitButton.classList.toggle('white', checkbox.classList.contains('checked'));
+//   errorMessage.style.display = 'none';
+// });
+
+$(document).ready(function() {
+  $("#open-popup").click(function(event) {
+    event.preventDefault();
+
+    // Get form data
+    var formData = {
+      email: $("#email").val(),
+      numberOfTons: $("#number-of-tons").val(),
+      pickUpCoordinate: $("#pick-up-coordinate").val()
+    };
+
+    // Simulate form submission delay
+    setTimeout(function() {
+      // Show pop-up
+      $("body").addClass("active-popup");
+      $(".page-container").addClass("active-popup");
+    }, 1000); // Adjust the delay time as needed
+  });
+
+  $(".close-btn, .page-container").click(function(event) {
+    if (
+      $(event.target).is(".close-btn") ||
+      $(event.target).is(".page-container")
+    ) {
+      // Hide pop-up
+      $("body").removeClass("active-popup");
+      $(".page-container").removeClass("active-popup");
+    }
+  });
+});
