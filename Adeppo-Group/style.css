@@ -81,6 +81,10 @@ svg {
 .container2 {
   display: flex;
   justify-content: space-between;
+  background-image: url(images/background-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .container {
@@ -109,10 +113,6 @@ svg {
 
 /* oil and gas page */
 /*navigation*/
-
-.primary-header {
-  padding-top: 1.875rem; 
-}
 
 .nav-wrapper {
   display: flex;
@@ -712,7 +712,7 @@ svg {
     display: block;
     position: relative;
     top: 261px;
-    margin-left: 5.6%;
+    margin-left: 18.6%;
   }
 }
 
@@ -725,6 +725,8 @@ svg {
   margin-right: 15%;
   position: relative;
   justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .pag-marker {
@@ -755,8 +757,10 @@ svg {
 
 @media (max-width: 50em) {
   .scroll-container {
-    display: grid;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
   }
 }
@@ -784,6 +788,7 @@ svg {
   background-size: cover;
   position: absolute;
   margin-left: 217px;
+  /* animation: clockwise-rotation 5s infinite linear; */
 }
 
 @media (max-width: 50em) {
@@ -794,20 +799,19 @@ svg {
     position: absolute;
     background-image: url("images/small-ring1.png");
     background-size: cover;
-    margin-left: 5.6%;
   }
 }
 
 @media (min-width: 801px) and (max-width: 1024px) {
   .scroll-wheel-wrapper {
-    top: 45px;
+    top: -70px;
     width: 650px;
     height: 650px;
     background-image: url("images/Ellipse1.png");
     background-size: cover;
     position: relative;
     overflow: hidden;
-    margin-left: -30px;
+    margin-left: 50px;
   }
 }
 
@@ -819,6 +823,7 @@ svg {
   background-image: url("images/Ellipse2.png");
   background-size: cover;
   position: absolute;
+  /* animation: anticlockwise-rotation 2s infinite linear; */
 }
 
 @media (max-width: 50em) {
@@ -904,7 +909,7 @@ svg {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.35);
     box-shadow: 0px 0px 4px 75px rgba(255, 255, 255, 0.05);
-    margin: 75px;
+    margin: 20.3%;
   }
 }
 
@@ -981,9 +986,9 @@ svg {
   border-color: #fff transparent transparent transparent;
   border-radius: 50%/50px 50px 0 0;
   position: relative;
-  top: 175px;
-  left: -63px;
-  transform: rotate(-113deg);
+  top: 157px;
+  left: -69px;
+  transform: rotate(-108deg);
 }
 
 @media (max-width: 50em) {
@@ -1012,6 +1017,19 @@ svg {
     transform: rotate(-112deg);
     border-radius: 65%/70px 66px 0 0;
   }
+
+  .menu-Circle1 {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    background-image: url('images/Ellipse5.png');
+    background-size: cover;
+    position: absolute;
+    margin-left: 63px;
+    margin-top: -35px;
+    transform: rotate(105deg);
+  }
 }
 
 .menu-circle1 {
@@ -1024,7 +1042,7 @@ svg {
   position: absolute;
   margin-left: 63px;
   margin-top: -35px;
-  transform: rotate(111deg);
+  transform: rotate(107deg);
 }
 
 @media (max-width: 50em) {
@@ -1076,9 +1094,9 @@ svg {
     border-color: #fff transparent transparent transparent;
     border-radius: 50%/50px 50px 0 0;
     position: relative;
-    top: 30px;
-    left: 156px;
-    transform: rotate(110deg)
+    top: 33px;
+    left: 154px;
+    transform: rotate(111deg)
   }
 }
 
@@ -1092,7 +1110,7 @@ svg {
   position: absolute;
   left: 55px;
   top: -45px;
-  transform: rotate(-107deg);
+  transform: rotate(-105deg);
 }
 
 @media (max-width: 50em) {
@@ -1127,7 +1145,7 @@ svg {
   width: 35.1px;
   height: 23.7px;
   display: block;
-  margin: auto;
+  margin-top: 15px;
 }
 
 @media (max-width: 50em) {
@@ -1145,7 +1163,7 @@ svg {
   width: 29.17px;
   height: 34.85px;
   display: block;
-  margin: auto;
+  margin-top: 10px;
 }
 
 @media (max-width: 50em) {
@@ -1163,7 +1181,7 @@ svg {
   width: 25.5px;
   height: 32.81px;
   display: block;
-  margin: auto;
+  margin-top: 10px;
 }
 
 @media (max-width: 50em) {
@@ -1185,9 +1203,8 @@ svg {
 p.text {
   font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 5px;
+    font-size: 10px;
     font-style: normal;
-    padding: 2px;
 }
 
 @media (max-width: 50em) {
@@ -1307,7 +1324,7 @@ p.text {
     color: #222222;
     border: 1px;
     margin-left: 16.45px;
-    margin-top: 11.06px;
+    margin-top: 19.06px;
     height: 25%
   }
 }
@@ -1364,7 +1381,8 @@ p.text {
 }
 
 .description-column-text {
-  display: block;
+  display: flex;
+  flex-direction: column;
   top: 540px;
   position: relative;
 }
@@ -1485,6 +1503,7 @@ p.text {
   .banner-section {
     display: flex;
     position: relative;
+    top: -37px;
   }
 }
 
@@ -1555,34 +1574,42 @@ p.text {
     flex-direction: column;
     margin-left: 60px;
     justify-content: center;
-    width: 44.85%;
-    height: 345px;
-    margin-top: 238.5px;
-    margin-right: 13px; 
+    /* margin-top: 24.5px; */
+    width: 48.9%;
+  }
+
+  .oil-and-gas-banner-text-header {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    color: #686868;
+  }
+  
+  .oil-and-gas-banner-text-body-big {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 115px;
+    color: #293037;
+    display: inline-block;
+    width: 108%;
+    height: 354px;
   }
 }
 
-.oil-and-gas-banner-text-header {
-  width: 14.25rem;
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-}
 
-.oil-and-gas-banner-text-body-big {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 66px;
-}
 
 @media (min-width: 801px) and (max-width: 1024px) {
   .oil-and-gas-banner-text-body-big {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 66px;  
+    font-size: 66px;
+    width: 100%;
+    height: 354px;  
   }
 }
 
@@ -1592,18 +1619,27 @@ p.text {
 
 
 
-@media (max-width: 50em) {
+@media (max-width: 407px) {
   .banner-column {
     display: flex;
-    margin-left: 1.25rem;
+    margin-left: 2.5%;
     flex-direction: column;
   }
 }
 
+@media (min-width: 407px) {
+  .banner-column {
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column; /* Center the content horizontally */
+  }
+}
 
 @media (min-width : 800px) {
   .banner-column {
     width: 45.42%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1646,7 +1682,8 @@ p.text {
 
 @media (min-width: 801px) {
   .banner-image-column {
-    margin-top: 154px;
+    margin-top: 32px;
+    margin-left: 3%;
   }
 }
 
@@ -1684,7 +1721,6 @@ p.text {
     margin-top: 139px;
     width: 100%;
     margin-left: 3.86%;
-    margin-right: 60px;
     margin-bottom: 140px;
   }
 } 
@@ -1714,7 +1750,7 @@ p.text {
     font-size: 48px;
     text-align: start;
     color: #414141;
-
+    margin-right: 3.86%;
   }
 }
 
@@ -1725,6 +1761,8 @@ p.text {
     font-weight: 400;
     text-align: center;
     color:#414141;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
@@ -1768,6 +1806,13 @@ p.text {
     margin-left: 4.19%;
     position: relative;
   }
+
+  .col1 {
+    margin-left: 4.19%;
+    position: relative;
+    width: 49.04%;
+
+  }
 }
 
 @media (min-width: 801px) {
@@ -1787,7 +1832,7 @@ p.text {
 
 @media (min-width: 801px) {
   .column-image-div {
-    width: 100%;
+    width: 640px;
     height: 440px;
     border-radius: 10px;
   }
@@ -1848,7 +1893,7 @@ p.text {
     display: grid;
     margin-left: 2%;
     text-align: start;
-    margin-right: 1%;
+    margin-right: 3%;
   }
 }
 
@@ -2516,7 +2561,7 @@ p.text {
 @media (max-width: 50em) {
   .pre-footer-container {
     height: 1022px;
-    width: 354px;
+    width: 81.625%;
     background: #C1844D;
     border-radius: 24px 24px 24px 24px;
     margin-top: 60px;
@@ -2616,8 +2661,9 @@ p.text {
   .pre-footer-about-us {
     align-items: center;
     width: 100%;
-    margin-left: 40px;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
   }
 
   .pre-footer-about-us-text {
@@ -2627,6 +2673,7 @@ p.text {
     font-weight: 500;
     display: flex;
     align-items: flex-end;
+    line-height: 29px;
     color: #FFFFFF;
     margin-bottom: 59.63px;
   }
@@ -3482,7 +3529,7 @@ p.text {
   }
   
   .section-image {
-    width: 89.57%;
+    width: 88%;
     height: 686px;
     position: relative;
     border-radius: 20px;
@@ -3498,10 +3545,6 @@ p.text {
   .logistics-column1 {
     width: 100%;
     position: relative;
-  }
-
-  .logistics-column2 {
-    margin-left: 3%;
   }
 }
 
@@ -4049,6 +4092,7 @@ p.text {
     font-size: 20px;
     line-height: 40px;
     color: #414141;
+    margin-right: 7.89%;
   }
 }
 
@@ -4142,7 +4186,7 @@ p.text {
   }
 
   .ren-col-1 {
-    width: 53.87%;
+    width: 640px;
     position: relative;
     margin-left: 9.09%;
   }
@@ -4178,7 +4222,7 @@ p.text {
     position: absolute;
     right: 50px;
     bottom: -150px;
-    width: 58.65%;
+    width: 51%;
     height: 150px;
     border-radius: 5px;
     background: #FF6D00;
@@ -5194,6 +5238,24 @@ p.text {
   transition: top 0ms ease-in-out 300ms, opacity 300ms ease-in-out, margin-top 300ms ease-in-out;
 }
 
+@media (max-width: 50em) {
+  .popup {
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -30%);
+  width: 80%;
+  height: 408px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 24px;
+  transition: top 0ms ease-in-out 300ms, opacity 300ms ease-in-out, margin-top 300ms ease-in-out;
+  }
+}
+
 .popup .close-btn {
   position: absolute;
   top: 10px;
@@ -5204,7 +5266,6 @@ p.text {
   border: 1px solid #E6E6E6;
   border-radius: 24px;
   justify-content: center;
-  align-items: center;
   cursor: pointer;
   display: flex;
 }
@@ -5300,4 +5361,22 @@ body.active-popup .popup {
 .page-container {
   min-height: 100vh;
   transition: filter 0ms ease-in-out;
+}
+
+@keyframes clockwise-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anticlockwise-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }

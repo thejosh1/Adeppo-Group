@@ -1,166 +1,160 @@
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function() {
   if (window.location.pathname === '/index.html') {
-    console.log('i am here');
     const body = document.body;
-    const overlay = document.getElementById('overlay');
-
-    // Set the background image
-    body.style.backgroundImage = 'url("images/background-img.png")';
-
-    // Get the menu-circle elements
+    const descriptionHeader = document.querySelector('.description-header');
+    const descriptionText = document.querySelector('.description-text');
+    const descriptionColumnText = document.getElementById('description-column-text');
     const menuCircle = document.getElementById('menu-circle');
     const menuCircle1 = document.getElementById('menu-circle1');
     const menuCircle2 = document.getElementById('menu-circle2');
-
-    // Get the pag-marker elements
     const pagMarker1 = document.getElementById('pag1').querySelector('.pag-marker');
     const pagMarker2 = document.getElementById('pag2').querySelector('.pag-marker');
     const pagMarker3 = document.getElementById('pag3').querySelector('.pag-marker');
+    const mobileText = document.getElementById('description-column-text');
+    const mobileButton = document.getElementById('mobile-button');
+    const borderColor = document.getElementById("borderColor");
+    const borderColor1 = document.getElementById("borderColor1");
+    const borderColo2 = document.getElementById("borderColor2");
 
-    //the description elements
-    const descriptionHeader = document.querySelector('.description-header');
-    const descriptionText = document.querySelector('.description-text');
-
-    // Get the description text elements
-    const descriptionColumnText = document.getElementById('description-column-text');
-
-    // Add event listeners to the menu-circle elements
-    menuCircle.addEventListener('mouseover', () => {
-      descriptionColumnText.className = 'description-column-text';
-    });
-
-    menuCircle1.addEventListener('mouseover', () => {
-      descriptionColumnText.className = 'description-column-text';
-    });
-
-    menuCircle2.addEventListener('mouseover', () => {
-      descriptionColumnText.className = 'description-column-text';
-    });
+    // Set the background image
+    body.style.backgroundImage = 'url("images/background-img.png")';
 
     // Set default colors
     pagMarker1.style.backgroundColor = 'transparent';
     pagMarker2.style.backgroundColor = 'transparent';
     pagMarker3.style.backgroundColor = 'transparent';
 
+    //
+    const menuCurvedLine1 = document.querySelector('.menu-curved-line');
+    const menuCurvedLine2 = document.querySelector('.menu-curved-line1');
+    const menuCurvedLine3 = document.querySelector('.menu-curved-line2');
+
     // Add transitions
     pagMarker1.style.transition = 'background-color 0.3s ease';
     pagMarker2.style.transition = 'background-color 0.3s ease';
     pagMarker3.style.transition = 'background-color 0.3s ease';
 
+    function resetBackgroundColors() {
+      const pagMarkers = [pagMarker1, pagMarker2, pagMarker3];
+      pagMarkers.forEach((marker) => {
+        marker.style.backgroundColor = 'transparent';
+      });
+    }
+
+    function changeBackgroundAndContent(color, header, text, imageUrl, pagMarker) {
+      setTimeout(() => {
+        body.style.backgroundImage = `url("${imageUrl}")`;
+      }, 300);
+    
+      body.style.transition = 'background-image 0.3s ease'; // Add transition for the background image
+    
+      resetBackgroundColors(); // Reset the background colors of all pagMarkers
+      pagMarker.style.backgroundColor = color; // Update the background color for the relevant pagMarker
+      
+      descriptionHeader.textContent = header;
+      descriptionText.textContent = text;
+    }
+
+    function handleClick(event, link) {
+      if (window.innerWidth <= 768) {
+        event.preventDefault();
+        mobileText.style.display = 'flex';
+        mobileButton.addEventListener('click', function() {
+          window.location.href = link;
+        });
+      }
+    }
+
     // Add event listeners to the menu-circle elements
-    menuCircle.addEventListener('mouseover', () => {
-      // Reset background color of other circles
-      pagMarker2.style.backgroundColor = 'transparent';
-      pagMarker3.style.backgroundColor = 'transparent';
-
-      //change the background
-      console.log( "i then went here");
-      overlay.style.opacity = '1';
-      overlay.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-      setTimeout(() => {
-        overlay.style.opacity = '0';
-        body.style.backgroundImage = 'url("images/oil-and-gas.png")';
-        overlay.style.backgroundColor = 'rgba(255, 255, 255, 0)';
-      }, 300);
-
-      // Update the clicked circle
-      pagMarker1.style.backgroundColor = 'brown';
-      descriptionHeader.textContent = 'Oil and Gas';
-      descriptionText.textContent = 'Providing services such as constructing rigs, designing pipes and pipelines, carrying out technical, construction works and supplies among others.';
-    });
-
-    menuCircle1.addEventListener('mouseover', () => {
-      // Reset background color of other circles
+    menuCircle.addEventListener('mouseover', function() {
+      console.log('Mouseover - menuCircle');
       pagMarker1.style.backgroundColor = 'transparent';
       pagMarker3.style.backgroundColor = 'transparent';
       pagMarker2.style.backgroundColor = 'transparent';
+      descriptionColumnText.className = 'description-column-text';
+      changeBackgroundAndContent(
+        '#774E26',
+        'Oil and Gas',
+        'Providing services such as constructing rigs, designing pipes and pipelines, carrying out technical, construction works and supplies among others.',
+        'images/oil-and-gas.png',
+        pagMarker1
+      );
+      menuCurvedLine2.style.borderTopColor = 'white';
+      menuCurvedLine3.style.borderTopColor = 'white';
 
-      //change the background color
-      console.log(" then here too");
-      overlay.style.opacity = '1';
-      overlay.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-      setTimeout(() => {
-        overlay.style.opacity = '0';
-        body.style.backgroundImage = 'url("images/background-img.png")';
-        overlay.style.backgroundColor = 'rgba(255, 255, 255, 0)'
-      }, 300);
-
-      // Update the clicked circle
-      pagMarker2.style.backgroundColor = 'blue';
-      descriptionHeader.textContent = 'Marine Logistics';
-      descriptionText.textContent = 'We ensure the process of planning, implementing and managing the movement of goods and information involved in the ocean carriage.';
+      // Change the border color of menu curved line 1
+      menuCurvedLine1.style.borderTopColor = '#774E26';
+      
+      //change the border color of the circle
+      borderColor.style.border = "3px solid #774E26";
+      borderColor1.style.border = "none";
+      borderColo2.style.border = "none";
     });
 
-    menuCircle2.addEventListener('mouseover', () => {
-      // Reset background color of other circles
-      pagMarker1.style.backgroundColor = 'transparent';
-      pagMarker2.style.backgroundColor = 'transparent';
-      pagMarker3.style.backgroundColor = 'transparent';
+    menuCircle1.addEventListener('mouseover', function() {
+      console.log('Mouseover - menuCircle1');
+      descriptionColumnText.className = 'description-column-text';
+      resetBackgroundColors();
+      changeBackgroundAndContent(
+        '#4B76E5',
+        'Marine Logistics',
+        'We ensure the process of planning, implementing and managing the movement of goods and information involved in the ocean carriage.',
+        'images/background-img.png',
+        pagMarker2
+      );
+      menuCurvedLine1.style.borderTopColor = 'white';
+      menuCurvedLine3.style.borderTopColor = 'white';
 
-      //change the background image
-      overlay.style.opacity = '1';
-      overlay.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-      setTimeout(() => {
-        overlay.style.opacity = '0';
-        body.style.backgroundImage = 'url("images/renewable-energy.png")';
-        overlay.style.backgroundColor = 'rgba(255, 255, 255, 0)';
-      }, 300);
+      // Change the border color of menu curved line 1
+      menuCurvedLine2.style.borderTopColor = '#4B76E5';
 
-      // Update the clicked circle
-      pagMarker3.style.backgroundColor = 'red';
-      descriptionHeader.textContent = 'Renewable Energy';
-      descriptionText.textContent = 'We find ways to generate energy from (theoretically) unlimited natural resources.';
+      //change the border color of the circle
+      borderColor.style.border = "none";
+      borderColor1.style.border = "3px solid #4B76E5";
+      borderColo2.style.border = "none";
     });
 
-    window.addEventListener('DOMContentLoaded', function () {
-      var link = document.getElementById('menu-circle');
-      var mobileText = document.getElementById('description-column-text');
-      var mobileButton = document.getElementById('mobile-button');
+    menuCircle2.addEventListener('mouseover', function() {
+      console.log('Mouseover - menuCircle2');
+        pagMarker1.style.backgroundColor = 'transparent';
+        pagMarker3.style.backgroundColor = 'transparent';
+        pagMarker2.style.backgroundColor = 'transparent';
+        descriptionColumnText.className = 'description-column-text';
+        resetBackgroundColors();
+        changeBackgroundAndContent(
+        '#FF6D00',
+        'Renewable Energy',
+        'We find ways to generate energy from (theoretically) unlimited natural resources.',
+        'images/renewable-energy.png',
+        pagMarker3
+      );
+      menuCurvedLine1.style.borderTopColor = 'white';
+      menuCurvedLine2.style.borderTopColor = 'white';
 
-      link.addEventListener('click', function (event) {
-        if (window.innerWidth <= 768) {
-          event.preventDefault(); // Prevent the default navigation behavior
-          mobileText.style.display = 'flex';
-          mobileButton.addEventListener('click', function () {
-            window.location.href = 'oil-and-gas.html';
-          })
-        }
-      });
+      // Change the border color of menu curved line 3
+      menuCurvedLine3.style.borderTopColor = '#FF6D00';
+
+      //change the border color of the circle
+      borderColor.style.border = "none";
+      borderColor1.style.border = "none";
+      borderColo2.style.border = "3px solid #FF6D00";
     });
 
-    window.addEventListener('DOMContentLoaded', function () {
-      var link = document.getElementById('menu-circle1');
-      var mobileText = document.getElementById('description-column-text');
-      var mobileButton = document.getElementById('mobile-button');
-
-      link.addEventListener('click', function (event) {
-        if (window.innerWidth <= 768) {
-          event.preventDefault(); // Prevent the default navigation behavior
-          mobileText.style.display = 'flex';
-          mobileButton.addEventListener('click', function () {
-            window.location.href = 'logistics.html';
-          })
-        }
-      });
+    // Click event listeners for mobile devices
+    menuCircle.addEventListener('click', function(event) {
+      handleClick(event, 'oil-and-gas.html');
     });
 
-    window.addEventListener('DOMContentLoaded', function () {
-      var link = document.getElementById('menu-circle2');
-      var mobileText = document.getElementById('description-column-text');
-      var mobileButton = document.getElementById('mobile-button');
+    menuCircle1.addEventListener('click', function(event) {
+      handleClick(event, 'logistics.html');
+    });
 
-      link.addEventListener('click', function (event) {
-        if (window.innerWidth <= 768) {
-          event.preventDefault(); // Prevent the default navigation behavior
-          mobileText.style.display = 'flex';
-          mobileButton.addEventListener('click', function () {
-            window.location.href = 'renewable-energy.html';
-          })
-        }
-      });
+    menuCircle2.addEventListener('click', function(event) {
+      handleClick(event, 'renewable-energy.html');
     });
   }
 });
+
 
 $(document).ready(function() {
   // breake line after screen resize
