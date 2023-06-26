@@ -291,3 +291,55 @@ $(document).ready(function() {
     }
   });
 });
+
+function showContainer(containerIndex) {
+  var containers = document.querySelectorAll('.section-pre-footer-container, .section-pre-footer-container2, .section-pre-footer-container3');
+
+  // Show the selected container
+  var selectedContainer = document.querySelector('.section-pre-footer-container' + containerIndex);
+  selectedContainer.style.display = 'flex';
+
+  // Hide other containers
+  containers.forEach(function(container) {
+    if (!container.classList.contains('section-pre-footer-container' + containerIndex)) {
+      container.style.display = 'none';
+    }
+  });
+}
+
+// Get the elements for click events
+var realTimeContainers = document.querySelectorAll('.real-time-container');
+var customerContainers = document.querySelectorAll('.customer-container');
+var goodManagementContainers = document.querySelectorAll('.good-management-container');
+
+// Add click event listeners to all real-time containers
+realTimeContainers.forEach(function(container) {
+  container.addEventListener('click', function() {
+    showContainer(2);
+  });
+});
+
+// Get the customer containers
+var customerContainers = document.querySelectorAll('.customer-container');
+
+// Add click event listeners to all customer containers
+customerContainers.forEach(function(container) {
+  container.addEventListener('click', function() {
+    var sectionPreFooterContainer2 = document.querySelector('.section-pre-footer-container2');
+    var sectionPreFooterContainer3 = document.querySelector('.section-pre-footer-container3');
+    
+    sectionPreFooterContainer2.style.display = 'none';
+    sectionPreFooterContainer3.style.display = 'none';
+    
+    var sectionPreFooterContainer = document.querySelector('.section-pre-footer-container');
+    sectionPreFooterContainer.style.display = 'flex';
+  });
+});
+
+
+// Add click event listeners to all good management containers
+goodManagementContainers.forEach(function(container) {
+  container.addEventListener('click', function() {
+    showContainer(3);
+  });
+});

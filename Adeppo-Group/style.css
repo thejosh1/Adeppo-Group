@@ -2577,6 +2577,18 @@ p.text {
     margin-top: 140px;
     display: flex;
   }
+
+  .section-pre-footer-container2 {
+    width: 100%;
+    margin-top: 140px;
+    display: none;
+  }
+
+  .section-pre-footer-container3 {
+    width: 100%;
+    margin-top: 140px;
+    display: none;
+  }
 }
 
 @media (min-width: 801px) {
@@ -2588,6 +2600,23 @@ p.text {
     background: #C1844D;
     margin-left: 2.12%;
     position: relative;
+  }
+
+  .pre-footer-container2 {
+    height: 434px;
+    width: 73%;
+    display: flex;
+    background: #060454;
+    position: relative;
+  }
+
+  .pre-footer-container3 {
+    height: 434px;
+    width: 73%;
+    display: flex;
+    background: #FF6D00;
+    position: relative;
+    border-radius: 0px 24px 24px 0px;
   }
 }
 
@@ -2609,7 +2638,7 @@ p.text {
     white-space: nowrap;
     position: absolute;
     top: 95%;
-    left: 0px;
+    left: -20px;
     width: max-content;
     display: flex;
     height: 67.1px;
@@ -2739,6 +2768,7 @@ p.text {
 @media (min-width: 801px) {
   .ceo-name-and-image {
     display: flex;
+    margin-top: 63px;
   }
 
   .pre-footer-image {
@@ -2819,7 +2849,6 @@ p.text {
     width: 136.05px;
     height: 434px;
     background: #060454;
-
   }
 
   .real-time-updates {
@@ -2828,7 +2857,7 @@ p.text {
     display: flex;
     position: absolute;
     top: 95%;
-    left: 0px;
+    left: -20px;
     width: max-content;
   }
 
@@ -2850,6 +2879,8 @@ p.text {
     margin-top: 30.09px;
     margin-bottom: 35.02px;
   }
+
+
 }
 
 @media (max-width: 50em) {
@@ -2873,8 +2904,19 @@ p.text {
     display: flex;
     position: absolute;
     top: 95%;
-    left: 0px;
+    left: -20px;
     width: max-content;
+  }
+
+  @media(min-width: 801px) {
+    .customer-container {
+      height: 434px;
+      width: 136.05px;
+      background-color: #C1844D;
+      border-radius: 24px 0px 0px 24px;
+      position: relative;
+      margin-left: 2.12%;
+    }
   }
 }
 
@@ -3700,7 +3742,7 @@ p.text {
     display: flex;
   }
 
-  .circle1 {
+  .renewable-circle1 {
     width: 36.94%;
     height: 460px;
     border-radius: 50%;
@@ -3713,9 +3755,95 @@ p.text {
     margin-left: 4.8%;
     margin-top: 60px;
     margin-bottom: 60px;
+    position: relative;
+  }
+  
+  .renewable-circle1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/solar-installation.png); /* Replace with your desired image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .renewable-circle1:hover::after {
+    opacity: 1;
+  }
+  
+  /* Added styles for the text */
+  .renewable-circle1 .circle-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+  }
+  
+  .renewable-circle1 .small-circle-text {
+    margin-top: 10px;
+    z-index: 1;
+    color: white;
+    text-align: center; /* Adjust the margin as needed */
+  }
+  
+
+  .logistic-circle1 {
+    position: relative;
+    width: 36.94%;
+    height: 460px;
+    border-radius: 50%;
+    background: #C1844D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    margin-left: 4.8%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    overflow: hidden;
+  }
+  
+  .logistic-circle1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/ship-image.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .logistic-circle1:hover::after {
+    opacity: 1;
+  }
+  
+  /* Added styles for the text */
+  .logistic-circle1 .circle-text { 
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+  }
+  
+  .logistic-circle1 .small-circle-text {
+    margin-top: 10px;
+    z-index: 1;
+    color: white;
+    text-align: center; /* Adjust the margin as needed */
   }
 
-  .circle2 {
+  .logistic-circle2 {
+    position: relative;
     width: 36.94%;
     height: 460px;
     border-radius: 50%;
@@ -3728,9 +3856,94 @@ p.text {
     margin-left: -3.2%;
     margin-top: 60px;
     margin-bottom: 60px;
+    overflow: hidden;
+  }
+  
+  .logistic-circle2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/deck-image.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .logistic-circle2:hover::after {
+    opacity: 1;
+  }
+  
+  /* Added styles for the text */
+  .logistic-circle2 .circle-text{
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
   }
 
-  .circle3 {
+  .logistic-circle2 .small-circle-text {
+    margin-top: 10px;
+    z-index: 1;
+    color: white;
+    text-align: center; /* Adjust the margin as needed */
+  }
+  
+  .renewable-circle2 {
+    position: relative;
+    width: 36.94%;
+    height: 460px;
+    border-radius: 50%;
+    background: #FF8428;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin-left: -3.2%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    overflow: hidden;
+  }
+  
+  .renewable-circle2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/solar-field.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .renewable-circle2:hover::after {
+    opacity: 1;
+  }
+  
+  /* Added styles for the text */
+  .renewable-circle2 .circle-text{
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+  }
+
+  .renewable-circle2 .small-circle-text {
+    margin-top: 10px;
+    z-index: 1;
+    color: white;
+    text-align: center; /* Adjust the margin as needed */
+  }
+
+  .logistic-circle3 {
+    position: relative;
     width: 36.94%;
     height: 460px;
     border-radius: 50%;
@@ -3744,7 +3957,93 @@ p.text {
     margin-top: 60px;
     margin-bottom: 60px;
     margin-right: 4.8%;
+    overflow: hidden;
   }
+  
+  .logistic-circle3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/boat-image.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .logistic-circle3:hover::after {
+    opacity: 1;
+  }
+  
+  /* Added styles for the text */
+  .logistic-circle3 .circle-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+  }
+
+  .logistic-circle3 .small-circle-text {
+    margin-top: 10px;
+    z-index: 1;
+    color: white;
+    text-align: center; /* Adjust the margin as needed */
+  }
+
+  .renewable-circle3 {
+    position: relative;
+    width: 36.94%;
+    height: 460px;
+    border-radius: 50%;
+    background: #7572FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-left: -3.2%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-right: 4.8%;
+    overflow: hidden;
+  }
+  
+  .renewable-circle3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/solar-panel-vector.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .renewable-circle3:hover::after {
+    opacity: 1;
+  }
+  
+  /* Added styles for the text */
+  .renewable-circle3 .circle-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+  }
+
+  .renewable-circle3 .small-circle-text {
+    margin-top: 10px;
+    z-index: 1;
+    color: white;
+    text-align: center; /* Adjust the margin as needed */
+  }
+  
 
   .circle-text {
     font-family: 'Inter', sans-serif;
