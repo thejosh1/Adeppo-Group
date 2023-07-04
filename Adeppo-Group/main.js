@@ -343,3 +343,72 @@ goodManagementContainers.forEach(function(container) {
     showContainer(3);
   });
 });
+
+//50em
+function showContainer1(containerIndex) {
+  var containers = document.querySelectorAll('.pre-footer-container, .pre-footer-container1, .pre-footer-container2');
+
+  // Show the selected container
+  var selectedContainer = document.querySelector('.pre-footer-container' + containerIndex);
+  console.log("starting here");
+  selectedContainer.style.display = 'block';
+
+  // Hide other containers
+  containers.forEach(function(container) {
+    if (!container.classList.contains('pre-footer-container' + containerIndex)) {
+      container.style.display = 'none';
+    }
+  });
+}
+
+// Get the elements for click events
+var realTimeContainers = document.querySelectorAll('.real-time-updates');
+var real2 = document.querySelectorAll('.about-us-list2');
+var customerContainers = document.querySelectorAll('.about-us-list1');
+var goodManagementContainers = document.querySelectorAll('.good-management');
+
+// Hide other containers on first load
+var containers = document.querySelectorAll('.pre-footer-container1, .pre-footer-container2');
+containers.forEach(function(container) {
+  container.style.display = 'none';
+});
+
+// Add click event listeners to all real-time containers
+realTimeContainers.forEach(function(container) {
+  container.addEventListener('click', function() {
+    console.log("probably won't work");
+    document.querySelector('.pre-footer-container1').style.display = 'block';
+    document.querySelector('.pre-footer-container').style.display = 'none';
+    document.querySelector('.pre-footer-container2').style.display = 'none';
+  });
+});
+
+// Add click event listeners to all real-time containers
+real2.forEach(function(container) {
+  container.addEventListener('click', function() {
+    console.log("probably won't work");
+    document.querySelector('.pre-footer-container1').style.display = 'block';
+    document.querySelector('.pre-footer-container').style.display = 'none';
+    document.querySelector('.pre-footer-container2').style.display = 'none';
+  });
+});
+
+// Add click event listeners to all customer containers
+customerContainers.forEach(function(container) {
+  container.addEventListener('click', function() {
+    // showContainer1(0);
+    document.querySelector('.pre-footer-container').style.display = 'block';
+    document.querySelector('.pre-footer-container2').style.display = 'none';
+    document.querySelector('.pre-footer-container1').style.display = 'none';
+  });
+});
+
+// Add click event listeners to all good management containers
+goodManagementContainers.forEach(function(container) {
+  container.addEventListener('click', function() {
+    console.log("wish i can kiss her");
+    document.querySelector('.pre-footer-container2').style.display = 'block';
+    document.querySelector('.pre-footer-container').style.display = 'none';
+    document.querySelector('.pre-footer-container1').style.display = 'none';
+  });
+});
