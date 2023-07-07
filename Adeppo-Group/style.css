@@ -3885,7 +3885,7 @@ p.text {
 
   .indicator {
     width: 4px;
-    height: 106px;
+    height: 90px;
     border-radius: 20px;
     background: #060454;
     margin-bottom: 60px;
@@ -3893,6 +3893,16 @@ p.text {
   }
   
   .section-list-text-header {
+    margin-bottom: 16px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 29px;
+    color: #293037;
+  }
+
+  .section-list-text-header1 {
     margin-bottom: 16px;
     font-family: 'Lato';
     font-style: normal;
@@ -4809,6 +4819,12 @@ p.text {
   .section-list-text1 {
     margin-left: 9.35%;
     margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 801px) {
+  .section-list-text1 {
+    margin-left: 4.06%;
   }
 }
 
