@@ -292,59 +292,6 @@ $(document).ready(function() {
   });
 });
 
-function showContainer(containerIndex) {
-  var containers = document.querySelectorAll('.section-pre-footer-container, .section-pre-footer-container2, .section-pre-footer-container3');
-
-  // Show the selected container
-  var selectedContainer = document.querySelector('.section-pre-footer-container' + containerIndex);
-  selectedContainer.style.display = 'flex';
-
-  // Hide other containers
-  containers.forEach(function(container) {
-    if (!container.classList.contains('section-pre-footer-container' + containerIndex)) {
-      container.style.display = 'none';
-    }
-  });
-}
-
-// Get the elements for click events
-var realTimeContainers = document.querySelectorAll('.real-time-container');
-var customerContainers = document.querySelectorAll('.customer-container');
-var goodManagementContainers = document.querySelectorAll('.good-management-container');
-
-// Add click event listeners to all real-time containers
-realTimeContainers.forEach(function(container) {
-  container.addEventListener('click', function() {
-    showContainer(2);
-  });
-});
-
-// Get the customer containers
-var customerContainers = document.querySelectorAll('.customer-container');
-
-// Add click event listeners to all customer containers
-customerContainers.forEach(function(container) {
-  container.addEventListener('click', function() {
-    var sectionPreFooterContainer2 = document.querySelector('.section-pre-footer-container2');
-    var sectionPreFooterContainer3 = document.querySelector('.section-pre-footer-container3');
-    
-    sectionPreFooterContainer2.style.display = 'none';
-    sectionPreFooterContainer3.style.display = 'none';
-    
-    var sectionPreFooterContainer = document.querySelector('.section-pre-footer-container');
-    sectionPreFooterContainer.style.display = 'flex';
-  });
-});
-
-
-// Add click event listeners to all good management containers
-goodManagementContainers.forEach(function(container) {
-  container.addEventListener('click', function() {
-    showContainer(3);
-  });
-});
-
-//50em
 function showContainer1(containerIndex) {
   var containers = document.querySelectorAll('.pre-footer-container, .pre-footer-container1, .pre-footer-container2');
 
@@ -361,54 +308,365 @@ function showContainer1(containerIndex) {
   });
 }
 
-// Get the elements for click events
-var realTimeContainers = document.querySelectorAll('.real-time-updates');
-var real2 = document.querySelectorAll('.about-us-list2');
-var customerContainers = document.querySelectorAll('.about-us-list1');
-var goodManagementContainers = document.querySelectorAll('.good-management');
+function handleBigScreens() {
+  function showContainer(containerIndex) {
+    var containers = document.querySelectorAll('.section-pre-footer-container, .section-pre-footer-container2, .section-pre-footer-container3');
 
-// Hide other containers on first load
-var containers = document.querySelectorAll('.pre-footer-container1, .pre-footer-container2');
-containers.forEach(function(container) {
-  container.style.display = 'none';
+    // Show the selected container
+    var selectedContainer = document.querySelector('.section-pre-footer-container' + containerIndex);
+    selectedContainer.style.display = 'flex';
+
+    // Hide other containers
+    containers.forEach(function(container) {
+      if (!container.classList.contains('section-pre-footer-container' + containerIndex)) {
+        container.style.display = 'none';
+      }
+    });
+  }
+
+  // Get the elements for click events
+  var realTimeContainers = document.querySelectorAll('.real-time-container');
+  var customerContainers = document.querySelectorAll('.customer-container');
+  var goodManagementContainers = document.querySelectorAll('.good-management-container');
+
+  // Add click event listeners to all real-time containers
+  realTimeContainers.forEach(function(container) {
+    container.addEventListener('click', function() {
+      showContainer(2);
+    });
+  });
+
+  // Get the customer containers
+  var customerContainers = document.querySelectorAll('.customer-container');
+
+  // Add click event listeners to all customer containers
+  customerContainers.forEach(function(container) {
+    container.addEventListener('click', function() {
+      var sectionPreFooterContainer2 = document.querySelector('.section-pre-footer-container2');
+      var sectionPreFooterContainer3 = document.querySelector('.section-pre-footer-container3');
+
+      sectionPreFooterContainer2.style.display = 'none';
+      sectionPreFooterContainer3.style.display = 'none';
+
+      var sectionPreFooterContainer = document.querySelector('.section-pre-footer-container');
+      sectionPreFooterContainer.style.display = 'flex';
+    });
+  });
+
+  // Add click event listeners to all good management containers
+  goodManagementContainers.forEach(function(container) {
+    container.addEventListener('click', function() {
+      showContainer(3);
+    });
+  });
+}
+
+function handleSmallScreens() {
+  var sectionPreFooterContainerSmall = document.querySelector('.section-pre-footer-container-small');
+  sectionPreFooterContainerSmall.style.display = 'block';
+
+  function showContainer1(containerIndex) {
+    var containers = document.querySelectorAll('.pre-footer-container, .pre-footer-container1, .pre-footer-container2');
+
+    // Show the selected container
+    var selectedContainer = document.querySelector('.pre-footer-container' + containerIndex);
+    console.log("starting here");
+    selectedContainer.style.display = 'block';
+
+    // Hide other containers
+    containers.forEach(function(container) {
+      if (!container.classList.contains('pre-footer-container' + containerIndex)) {
+        container.style.display = 'none';
+      }
+    });
+  }
+
+  // Get the elements for click events
+  var realTimeContainers = document.querySelectorAll('.real-time-updates');
+  var real2 = document.querySelectorAll('.about-us-list2');
+  var customerContainers = document.querySelectorAll('.about-us-list1');
+  var goodManagementContainers = document.querySelectorAll('.good-management');
+
+  // Hide other containers on first load
+  var containers = document.querySelectorAll('.pre-footer-container1, .pre-footer-container2');
+  containers.forEach(function(container) {
+    container.style.display = 'none';
+  });
+
+  // Add click event listeners to all real-time containers
+  function showContainer(containerIndex) {
+    var containers = document.querySelectorAll('.section-pre-footer-container, .section-pre-footer-container2, .section-pre-footer-container3');
+  
+    // Show the selected container
+    var selectedContainer = document.querySelector('.section-pre-footer-container' + containerIndex);
+    selectedContainer.style.display = 'flex';
+  
+    // Hide other containers
+    containers.forEach(function(container) {
+      if (!container.classList.contains('section-pre-footer-container' + containerIndex)) {
+        container.style.display = 'none';
+      }
+    });
+  }
+  
+  // Get the elements for click events
+  var realTimeContainers = document.querySelectorAll('.real-time-container');
+  var customerContainers = document.querySelectorAll('.customer-container');
+  var goodManagementContainers = document.querySelectorAll('.good-management-container');
+  
+  // Add click event listeners to all real-time containers
+  realTimeContainers.forEach(function(container) {
+    container.addEventListener('click', function() {
+      showContainer(2);
+    });
+  });
+  
+  // Get the customer containers
+  var customerContainers = document.querySelectorAll('.customer-container');
+  
+  // Add click event listeners to all customer containers
+  customerContainers.forEach(function(container) {
+    container.addEventListener('click', function() {
+      var sectionPreFooterContainer2 = document.querySelector('.section-pre-footer-container2');
+      var sectionPreFooterContainer3 = document.querySelector('.section-pre-footer-container3');
+      
+      sectionPreFooterContainer2.style.display = 'none';
+      sectionPreFooterContainer3.style.display = 'none';
+      
+      var sectionPreFooterContainer = document.querySelector('.section-pre-footer-container');
+      sectionPreFooterContainer.style.display = 'flex';
+    });
+  });
+  
+  
+  // Add click event listeners to all good management containers
+  goodManagementContainers.forEach(function(container) {
+    container.addEventListener('click', function() {
+      showContainer(3);
+    });
+  });
+}
+
+function handleWindowResize() {
+  var resizeTimeout;
+
+  function handleResize() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+      if (window.innerWidth < 50 * parseFloat(getComputedStyle(document.documentElement).fontSize)) {
+        handleSmallScreens();
+      } else {
+        handleBigScreens();
+      }
+    }, 200);
+  }
+
+  window.addEventListener('resize', handleResize);
+}
+
+window.addEventListener('load', function() {
+  if (window.innerWidth < 50 * parseFloat(getComputedStyle(document.documentElement).fontSize)) {
+    handleSmallScreens();
+  } else {
+    handleBigScreens();
+  }
+  handleWindowResize();
 });
 
-// Add click event listeners to all real-time containers
-realTimeContainers.forEach(function(container) {
-  container.addEventListener('click', function() {
-    console.log("probably won't work");
-    document.querySelector('.pre-footer-container1').style.display = 'block';
-    document.querySelector('.pre-footer-container').style.display = 'none';
-    document.querySelector('.pre-footer-container2').style.display = 'none';
+const texts = document.querySelectorAll(".indicator");
+
+const removeActiveClass = () => {
+  texts.forEach(text => {
+    text.classList.remove("isActive");
   });
+};
+
+let activeIndicator = null;
+
+const addActiveClass = (entries, observer) => {
+  entries.forEach(entry => {
+    const indicatorElement = entry.target.querySelector('.indicator');
+    const headerElement = entry.target.querySelector('.section-list-text-header');
+    
+    if (entry.isIntersecting && indicatorElement && headerElement) {
+      removeActiveClass();
+      indicatorElement.classList.add("isActive");
+      headerElement.style.color = '#293037';
+      activeIndicator = indicatorElement;
+      console.log(indicatorElement);
+      
+      // Change color of previous header back to #686868
+      const previousHeaderElement = entry.target.previousElementSibling?.querySelector('.section-list-text-header');
+      if (previousHeaderElement) {
+        previousHeaderElement.style.color = '#686868';
+      }
+    }
+  });
+};
+
+const options = {
+  threshold: 0.8
+};
+
+const observer = new IntersectionObserver(addActiveClass, options);
+const sections = document.querySelectorAll(".indicator-text");
+
+sections.forEach(section => {
+  observer.observe(section);
 });
 
-// Add click event listeners to all real-time containers
-real2.forEach(function(container) {
-  container.addEventListener('click', function() {
-    console.log("probably won't work");
-    document.querySelector('.pre-footer-container1').style.display = 'block';
-    document.querySelector('.pre-footer-container').style.display = 'none';
-    document.querySelector('.pre-footer-container2').style.display = 'none';
-  });
+let lastScrollPosition = window.pageYOffset;
+
+window.addEventListener('scroll', () => {
+  const currentScrollPosition = window.pageYOffset;
+
+  if (currentScrollPosition > lastScrollPosition) {
+    // Scrolling down
+    if (activeIndicator) {
+      const activeSectionRect = activeIndicator.closest('.indicator-text').getBoundingClientRect();
+      if (activeSectionRect.bottom <= 0) {
+        const visibleSections = Array.from(sections).filter(section => {
+          const sectionRect = section.getBoundingClientRect();
+          return sectionRect.top < window.innerHeight && sectionRect.bottom >= 0;
+        });
+        if (visibleSections.length > 0) {
+          const lastVisibleSection = visibleSections[visibleSections.length - 1];
+          const newActiveIndicator = lastVisibleSection.querySelector('.indicator');
+          if (newActiveIndicator) {
+            removeActiveClass();
+            newActiveIndicator.classList.add("isActive");
+            activeIndicator = newActiveIndicator;
+            console.log(newActiveIndicator);
+          }
+        }
+      }
+    }
+  } else {
+    // Scrolling up
+    if (activeIndicator) {
+      const activeSectionRect = activeIndicator.closest('.indicator-text').getBoundingClientRect();
+      if (activeSectionRect.top > window.innerHeight) {
+        const visibleSections = Array.from(sections).filter(section => {
+          const sectionRect = section.getBoundingClientRect();
+          return sectionRect.top < window.innerHeight && sectionRect.bottom >= 0;
+        });
+        if (visibleSections.length > 0) {
+          const firstVisibleSection = visibleSections[0];
+          const newActiveIndicator = firstVisibleSection.querySelector('.indicator');
+          if (newActiveIndicator) {
+            removeActiveClass();
+            newActiveIndicator.classList.add("isActive");
+            activeIndicator = newActiveIndicator;
+            console.log(newActiveIndicator);
+          }
+        }
+      }
+    }
+  }
+
+  lastScrollPosition = currentScrollPosition <= 0 ? 0 : currentScrollPosition;
 });
 
-// Add click event listeners to all customer containers
-customerContainers.forEach(function(container) {
-  container.addEventListener('click', function() {
-    // showContainer1(0);
-    document.querySelector('.pre-footer-container').style.display = 'block';
-    document.querySelector('.pre-footer-container2').style.display = 'none';
-    document.querySelector('.pre-footer-container1').style.display = 'none';
-  });
+
+window.addEventListener('load', function() {
+  if (window.innerWidth < 50 * parseFloat(getComputedStyle(document.documentElement).fontSize)) {
+    handleSmallScreens();
+  } else {
+    handleBigScreens();
+  }
+  handleWindowResize();
 });
 
-// Add click event listeners to all good management containers
-goodManagementContainers.forEach(function(container) {
-  container.addEventListener('click', function() {
-    console.log("wish i can kiss her");
-    document.querySelector('.pre-footer-container2').style.display = 'block';
-    document.querySelector('.pre-footer-container').style.display = 'none';
-    document.querySelector('.pre-footer-container1').style.display = 'none';
+const smalltexts = document.querySelectorAll(".indicator1");
+
+const smallremoveActiveClass = () => {
+  smalltexts.forEach(text => {
+    text.classList.remove("isactive");
   });
+};
+
+let smallactiveIndicator = null;
+
+const smalladdActiveClass = (entries, observer) => {
+  entries.forEach(entry => {
+    const smallindicatorElement = entry.target.querySelector('.indicator1');
+    const headerElement = entry.target.querySelector('.section-list-text-header1');
+    
+    if (entry.isIntersecting && smallindicatorElement && headerElement) {
+      smallremoveActiveClass();
+      smallindicatorElement.classList.add("isactive");
+      headerElement.style.color = '#293037';
+      smallactiveIndicator = smallindicatorElement;
+      console.log(smallindicatorElement.target);
+      
+      // Change color of previous header back to #686868
+      const previousHeaderElement = entry.target.previousElementSibling?.querySelector('.section-list-text-header1');
+      if (previousHeaderElement) {
+        previousHeaderElement.style.color = '#686868';
+      }
+    }
+  });
+};
+
+const smalloptions = {
+  threshold: 0.5
+};
+
+const smallobserver = new IntersectionObserver(smalladdActiveClass, smalloptions);
+const smallsections = document.querySelectorAll(".indicator-text1");
+
+smallsections.forEach(section => {
+  smallobserver.observe(section);
+});
+
+let smalllastScrollPosition = window.pageYOffset;
+
+window.addEventListener('scroll', () => {
+  const currentScrollPosition = window.pageYOffset;
+
+  if (currentScrollPosition > smalllastScrollPosition) {
+    // Scrolling down
+    if (smallactiveIndicator) {
+      const activeSectionRect = smallactiveIndicator.closest('.indicator-text1').getBoundingClientRect();
+      if (activeSectionRect.bottom <= 0) {
+        const visibleSections = Array.from(smallsections).filter(section => {
+          const sectionRect = section.getBoundingClientRect();
+          return sectionRect.top < window.innerHeight && sectionRect.bottom >= 0;
+        });
+        if (visibleSections.length > 0) {
+          const lastVisibleSection = visibleSections[visibleSections.length - 1];
+          const newActiveIndicator = lastVisibleSection.querySelector('.indicator1');
+          if (newActiveIndicator) {
+            smallremoveActiveClass();
+            newActiveIndicator.classList.add("isactive");
+            smallactiveIndicator = newActiveIndicator;
+            console.log(newActiveIndicator);
+          }
+        }
+      }
+    }
+  } else {
+    // Scrolling up
+    if (smallactiveIndicator) {
+      const activeSectionRect = smallactiveIndicator.closest('.indicator-text1').getBoundingClientRect();
+      if (activeSectionRect.top > window.innerHeight) {
+        const visibleSections = Array.from(smallsections).filter(section => {
+          const sectionRect = section.getBoundingClientRect();
+          return sectionRect.top < window.innerHeight && sectionRect.bottom >= 0;
+        });
+        if (visibleSections.length > 0) {
+          const firstVisibleSection = visibleSections[0];
+          const newActiveIndicator = firstVisibleSection.querySelector('.indicator1');
+          if (newActiveIndicator) {
+            smallremoveActiveClass();
+            newActiveIndicator.classList.add("isactive");
+            smallactiveIndicator = newActiveIndicator;
+            console.log(newActiveIndicator);
+          }
+        }
+      }
+    }
+  }
+
+  smalllastScrollPosition = currentScrollPosition <= 0 ? 0 : currentScrollPosition;
 });
